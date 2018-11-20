@@ -4,8 +4,13 @@
 \name{hosperf}
 \alias{hosperf}
 \alias{hosperf-package}
-\title{...}
+\title{Tools to Query Data from the Australian Institute of Health and Welfare 'MyHospitals' Portal}
 \description{
+More than 1,000 public and private hospitals across Australia have
+performance data available on 'MyHospitals' (<www.myhospitals.gov.au/>). Methods
+are provides to query indicators for available hospitals over time.
+}
+\details{
 \itemize{
 \item URL: \url{https://gitlab.com/hrbrmstr/hosperf}
 \item BugReports: \url{https://gitlab.com/hrbrmstr/hosperf/issues}

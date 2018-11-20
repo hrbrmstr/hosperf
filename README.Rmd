@@ -4,11 +4,21 @@ output: rmarkdown::github_document
 
 # hosperf
 
+Tools to Query Data from the Australian Institute of Health and Welfare'MyHospitals' Portal
+
 ## Description
+
+More than 1,000 public and private hospitals across Australia have performance data available on 'MyHospitals' (<www.myhospitals.gov.au/>). Methods are provides to query indicators for available hospitals over time.
 
 ## What's Inside The Tin
 
 The following functions are implemented:
+
+- `get_datasets`:	Returns a custom dataset of a requested set of indicators for all available hospitals over a given time frame.
+- `get_hospitals`:	Returns a data frame of all (public) hospitals with data in the MyHospitals website.
+- `get_indicators`:	Returns a data frame of all indicators measured within the MyHospitals website.
+
+NOTE: The endpoints are memoised to save the API bandwidth/CPU and due to the low likelihood of the data changing in-analysis session.
 
 ## Installation
 
@@ -24,9 +34,21 @@ options(width=120)
 
 ```{r message=FALSE, warning=FALSE, error=FALSE}
 library(hosperf)
+library(tidyverse) # lazy since it's just for better printing
 
 # current verison
 packageVersion("hosperf")
 
 ```
 
+```{r}
+get_hospitals()
+```
+
+```{r}
+get_indicators()
+```
+
+```{r}
+glimpse(get_datasets(111, "2013-06"))
+```

@@ -1,6 +1,7 @@
 Package: hosperf
 Type: Package
-Title: hosperf title goes here otherwise CRAN checks fail
+Title: Tools to Query Data from the Australian Institute of Health and 
+    Welfare 'MyHospitals' Portal
 Version: 0.1.0
 Date: 2018-11-20
 Authors@R: c(
@@ -8,7 +9,9 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: More than 1,000 public and private hospitals across Australia have 
+    performance data available on 'MyHospitals' (<www.myhospitals.gov.au/>). Methods
+    are provides to query indicators for available hospitals over time.
 URL: https://gitlab.com/hrbrmstr/hosperf
 BugReports: https://gitlab.com/hrbrmstr/hosperf/issues
 Encoding: UTF-8
@@ -20,5 +23,6 @@ Depends:
     R (>= 3.2.0)
 Imports:
     httr,
+    memoise,
     jsonlite
 RoxygenNote: 6.0.1.9000
